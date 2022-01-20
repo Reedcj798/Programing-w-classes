@@ -60,30 +60,21 @@ def main():
         print("")
 
 def win_test(one,two,thr,four,five,six,svn,egt,nine,go,player):
-    if one == two == thr:
-        win(player,go)
-    elif one == five == nine:
-        win(player,go)
-    elif four == five == six:
-        win(player,go)
-    elif svn == egt == nine:
-       win(player,go)
-    elif svn == five == thr:
-        win(player,go)
-    elif one == four == svn:
-        win(player,go)
-    elif two == five == egt:
-        win(player,go)
-    elif thr == six== nine:
-        win(player,go)
+    if (one == two == thr
+    or one == five == nine
+    or four == five == six
+    or svn == egt == nine
+    or svn == five == thr
+    or one == four == svn
+    or two == five == egt
+    or thr == six== nine):
+        print("")
+        print("Game Over!", player, "Wins!")
+        game_board(one,two,thr,four,five,six,svn,egt,nine)
+        go = 0
+        return go
     else:
         return go
-
-def win(player,go):
-    print("")
-    print("Game Over!", player, "Wins!")
-    go = 0
-    return go
 
 main()
 # %%
